@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian's Bevvies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Brian's Bevvies</h2><br>
+            <p>Choose your drink</p>
+        </header>
+
+        <div class="content">
+            <div class="img"></div>
+            <form action="#" method="post" class="drink-form">
+                <!-- Size -->
+                <fieldset>
+                    <legend>Choose the size:</legend><br>
+                    <select name="size" id="size">
+                        <option class="size-option" value="2.70">Small</option>
+                        <option class="size-option" value="3.20" selected>Medium</option>
+                        <option class="size-option" value="3.70">Large</option>
+                        <option class="size-option" value="4.50">Extra Large</option>
+                    </select>
+                </fieldset>
+
+                <!-- type -->
+                <fieldset>
+                    <legend>Choose Type:</legend><br>
+                    <div>
+                        <label for="smoothie">Smoothie: </label>
+                        <input type="radio" name="type" id="smoothie" value="smoothie">
+                    </div>
+                    <div>
+                        <label for="milkshake">Milkshake: </label>
+                        <input type="radio" name="type" id="milkshake" value="milkshake">
+                    </div>
+                </fieldset>
+
+                <!-- ingredients -->
+                <fieldset class="ingredient-fieldset">
+                    <legend>Choose at least 1 ingredient: </legend><br>
+                    
+                    <!-- filled with json data -->
+                </fieldset>
+
+                <!-- base for milkshakes -->
+                <fieldset class="milk-base">
+                    <legend>Choose base:</legend>
+                    <select name="milk-base" id="milk-base">
+                        <option value="whole milk">Whole milk</option>
+                        <option value="semi-skimmed milk">Semi-skimmed milk</option>
+                        <option value="skimmed milk" selected>Skimmed Milk</option>
+                        <option value="coconut milk">Coconut milk</option>
+                        <option value="oat milk">Oat milk</option>
+                    </select>
+                </fieldset>
+
+                <!-- base for smoothie -->
+                <fieldset class="smoothie-base">
+                    <legend>Choose base:</legend><br>
+                    <div>
+                        <label for="orange">Orange juice: </label>
+                        <input type="radio" name="smoothie-base" id="orange" value="orange juice" checked>
+                    </div>
+                    <div>
+                        <label for="apple">Apple juice: </label>
+                        <input type="radio" name="smoothie-base" id="apple" value="apple juice">
+                    </div>
+                </fieldset>
+
+                <!-- extras -->
+                <fieldset class="extras">
+                    <legend>Add extras for 85p each: </legend><br>
+    
+                    <div>
+                        <label for="malt">Malt: </label>
+                        <input type="checkbox" name="extras" id="malt" value="malt">
+                    </div>
+                    <div>
+                        <label for="marshmallow">Marshmallows: </label>
+                        <input type="checkbox" name="extras" id="marshmallow" value="marshmallows">
+                    </div>
+                    <div>
+                        <label for="whipped cream">Whipped cream: </label>
+                        <input type="checkbox" name="extras" id="whipped cream" value="whipped cream">
+                    </div>
+                    <div>
+                        <label for="flake">A flake: </label>
+                        <input type="checkbox" name="extras" id="flake" value="flake">
+                    </div>
+                </fieldset>
+
+                <!-- current cost output -->
+                <h4 class="current-cost">Current drink: £<span class="drink-cost">3.20</span></h4>
+
+                <!-- all the buttons -->
+                <div class="btn-container">
+                    <button type="button" class="add-order-btn">Add to order</button>
+                    <button type="button" class="add-favorite">Add to favourite</button>
+                    <button type="button" class="order-favorite">Order my favourite</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- section for current order -->
+        <div class="current-order-container">
+            <h3>Current order</h3><br>
+            <div class="current-order-content">
+                <!-- new drinks will be added here as user adds them to order -->
+                
+            </div>
+            <!-- total cost of all the drinks output -->
+            <br><h4 class="total-cost">Total cost: £<span class="total-span">0.00</span></h4>
+        </div>
+        
+        <!-- place order btn -->
+        <button type="button" class="place-order">Place order</button>
+
+    </div>
+</body>
+</html>
